@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plastic-Free Future: Awareness Today, Impact Tomorrow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌍 Plastic-Free Future: Awareness Today, Impact Tomorrow</h1>
+  </header>
+
+  <nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#types">Types of Plastics</a>
+    <a href="#harmful-effects">Harmful Effects</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="introduction">
+    <h2 class="section-title">
+      <img src="images/intro.png" alt="Introduction Icon" class="icon" />
+      Introduction
+    </h2>
+    <p>
+      Plastics are everywhere — from packaging and bottles to household items and electronics.
+      While convenient and inexpensive, plastics have become a major environmental concern.
+      They take hundreds of years to decompose, pollute oceans and soil, and threaten wildlife.
+      Reducing plastic use and promoting eco-friendly alternatives is crucial to preserving our planet.
+    </p>
+  </section>
+
+  <section id="types">
+    <h2 class="section-title">
+      <img src="images/types.png" alt="Types Icon" class="icon" />
+      Types of Plastics
+    </h2>
+    <p>Click below to learn more about each type of plastic:</p>
+    <ul class="plastic-list">
+      <li><a href="pet.html">PET (Polyethylene Terephthalate)</a></li>
+      <li><a href="hdpe.html">HDPE (High-Density Polyethylene)</a></li>
+      <li><a href="pvc.html">PVC (Polyvinyl Chloride)</a></li>
+      <li><a href="ldpe.html">LDPE (Low-Density Polyethylene)</a></li>
+      <li><a href="pp.html">PP (Polypropylene)</a></li>
+      <li><a href="ps.html">PS (Polystyrene)</a></li>
+    </ul>
+  </section>
+
+  <section id="harmful-effects">
+    <h2 class="section-title">
+      <img src="images/harmful.png" alt="Harmful Icon" class="icon" />
+      Harmful Effects of Plastics
+    </h2>
+    <ul>
+      <li><strong>Pollution:</strong> Plastics accumulate in landfills and oceans, harming wildlife.</li>
+      <li><strong>Health Risks:</strong> Chemicals in plastics can leach into food and water.</li>
+      <li><strong>Wildlife Threats:</strong> Animals can ingest or get entangled in plastic waste.</li>
+      <li><strong>Climate Impact:</strong> Plastic production emits greenhouse gases.</li>
+    </ul>
+  </section>
+
+  <section id="solutions">
+    <h2 class="section-title">
+      <img src="images/solutions.png" alt="Solutions Icon" class="icon" />
+      Solutions to Reduce Plastic Pollution
+    </h2>
+    <ul>
+      <li><strong>Reduce:</strong> Avoid single-use plastics.</li>
+      <li><strong>Reuse:</strong> Use reusable bottles and bags.</li>
+      <li><strong>Recycle:</strong> Follow local recycling rules.</li>
+      <li><strong>Alternatives:</strong> Use biodegradable or eco-friendly materials.</li>
+      <li><strong>Awareness:</strong> Educate others on sustainable living.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">
+      <img src="images/contact.png" alt="Contact Icon" class="icon" />
+      Contact
+    </h2>
+    <p>
+      Join our initiative or share your ideas!  
+      📧 <strong>shaikparvez2005@gmail.com</strong>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Plastic-Free Future | Designed by Shaik Parvez</p>
+  </footer>
+
+  <script>
+    // Smooth page fade transition
+    document.querySelectorAll('a').forEach(link => {
+      if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+        link.addEventListener('click', e => {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => (window.location = link.href), 300);
+        });
+      }
+    });
+
+    // Fade-in effect for sections
+    window.addEventListener("scroll", () => {
+      document.querySelectorAll("section").forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) section.classList.add("visible");
+      });
+    });
+  </script>
+<button id="backToTop" title="Go to top">↑</button>
+<script>
+  // Show button when user scrolls down
+  window.onscroll = function() {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Scroll smoothly to top when clicked
+  document.getElementById("backToTop").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+</body>
+</html>

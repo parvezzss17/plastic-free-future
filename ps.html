@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PS Plastic - Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>PS – Polystyrene (Resin Code #6)</h1>
+</header>
+
+<section class="details-section">
+  <img src="images/ps.png" alt="PS Plastic" class="plastic-img">
+
+  <h2>Properties</h2>
+  <ul>
+    <li>Thickness: 0.3mm – 1mm</li>
+    <li>Rigid, transparent, and lightweight</li>
+    <li>Poor resistance to UV and heat</li>
+  </ul>
+
+  <h2>Common Uses</h2>
+  <ul>
+    <li>Disposable cups and plates</li>
+    <li>Foam packaging and insulation</li>
+    <li>CD cases and plastic cutlery</li>
+  </ul>
+
+  <h2>Recyclability</h2>
+  <ul>
+    <li>♻️ Difficult to recycle due to low density</li>
+    <li>Often ends up in landfills or oceans</li>
+  </ul>
+
+  <p><strong>Hazards:</strong> Can release toxic styrene when burned — harmful to health and air quality.</p>
+
+  <div class="nav-buttons">
+    <a href="pp.html" class="back-btn">⬅ Back</a>
+    <a href="index.html" class="next-btn">🏠 Home</a>
+  </div>
+</section>
+
+<footer><p>© 2025 Plastic-Free Future</p></footer>
+
+<script>
+document.querySelectorAll('a').forEach(link => {
+  if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => (window.location = link.href), 300);
+    });
+  }
+});
+</script>
+<button id="backToTop" title="Go to top">↑</button>
+
+</body>
+</html>

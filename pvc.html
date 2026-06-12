@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PVC Plastic - Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>PVC – Polyvinyl Chloride (Resin Code #3)</h1>
+</header>
+
+<section class="details-section">
+  <img src="images/pvc.png" alt="PVC Plastic" class="plastic-img">
+
+  <h2>Properties</h2>
+  <ul>
+    <li>Thickness: 0.5mm – 2.5mm</li>
+    <li>Strong, rigid or flexible depending on formulation</li>
+    <li>Good electrical insulation and chemical resistance</li>
+  </ul>
+
+  <h2>Common Uses</h2>
+  <ul>
+    <li>Pipes, window frames, and flooring</li>
+    <li>Medical tubing and vinyl products</li>
+    <li>Credit cards and synthetic leather</li>
+  </ul>
+
+  <h2>Recyclability</h2>
+  <ul>
+    <li>♻️ Recyclable but not commonly accepted in all recycling centers</li>
+    <li>Requires special processing to avoid chlorine release</li>
+  </ul>
+
+  <p><strong>Hazards:</strong> Burning PVC releases dioxins — one of the most toxic environmental pollutants.</p>
+
+  <div class="nav-buttons">
+    <a href="hdpe.html" class="back-btn">⬅ Back</a>
+    <a href="ldpe.html" class="next-btn">Next ➡</a>
+  </div>
+</section>
+
+<footer><p>© 2025 Plastic-Free Future</p></footer>
+
+<script>
+document.querySelectorAll('a').forEach(link => {
+  if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => (window.location = link.href), 300);
+    });
+  }
+});
+</script>
+<button id="backToTop" title="Go to top">↑</button>
+
+</body>
+</html>

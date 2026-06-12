@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LDPE Plastic - Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>LDPE – Low-Density Polyethylene (Resin Code #4)</h1>
+</header>
+
+<section class="details-section">
+  <img src="images/ldpe.png" alt="LDPE Plastic" class="plastic-img">
+
+  <h2>Properties</h2>
+  <ul>
+    <li>Thickness: 0.1mm – 0.5mm</li>
+    <li>Flexible, soft, and lightweight</li>
+    <li>Moisture-resistant but has low heat resistance</li>
+  </ul>
+
+  <h2>Common Uses</h2>
+  <ul>
+    <li>Plastic bags and cling wraps</li>
+    <li>Squeeze bottles</li>
+    <li>Flexible tubing and film packaging</li>
+  </ul>
+
+  <h2>Recyclability</h2>
+  <ul>
+    <li>♻️ Recyclable in some regions</li>
+    <li>Often reused for garbage can liners and floor tiles</li>
+  </ul>
+
+  <p><strong>Hazards:</strong> Burning LDPE can release harmful gases and microplastics.</p>
+
+  <div class="nav-buttons">
+    <a href="pvc.html" class="back-btn">⬅ Back</a>
+    <a href="pp.html" class="next-btn">Next ➡</a>
+  </div>
+</section>
+
+<footer><p>© 2025 Plastic-Free Future</p></footer>
+
+<script>
+document.querySelectorAll('a').forEach(link => {
+  if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => (window.location = link.href), 300);
+    });
+  }
+});
+</script>
+<button id="backToTop" title="Go to top">↑</button>
+
+</body>
+</html>

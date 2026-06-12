@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HDPE Plastic - Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>HDPE – High-Density Polyethylene (Resin Code #2)</h1>
+</header>
+
+<section class="details-section">
+  <img src="images/hdpe.png" alt="HDPE Plastic" class="plastic-img">
+
+  <h2>Properties</h2>
+  <ul>
+    <li>Thickness: 0.4mm – 3mm</li>
+    <li>Strong, durable, and resistant to impact</li>
+    <li>Excellent resistance to chemicals and moisture</li>
+  </ul>
+
+  <h2>Common Uses</h2>
+  <ul>
+    <li>Milk jugs and detergent bottles</li>
+    <li>Pipes and plastic lumber</li>
+    <li>Containers for household chemicals</li>
+  </ul>
+
+  <h2>Recyclability</h2>
+  <ul>
+    <li>♻️ Highly recyclable and reused in non-food applications</li>
+    <li>Recycled HDPE can be used for piping and plastic furniture</li>
+  </ul>
+
+  <p><strong>Hazards:</strong> Burning HDPE releases toxic fumes. Always recycle responsibly.</p>
+
+  <div class="nav-buttons">
+    <a href="pet.html" class="back-btn">⬅ Back</a>
+    <a href="pvc.html" class="next-btn">Next ➡</a>
+  </div>
+</section>
+
+<footer><p>© 2025 Plastic-Free Future</p></footer>
+
+<script>
+document.querySelectorAll('a').forEach(link => {
+  if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => (window.location = link.href), 300);
+    });
+  }
+});
+</script>
+<button id="backToTop" title="Go to top">↑</button>
+
+</body>
+</html>

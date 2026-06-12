@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PET Plastic - Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>PET – Polyethylene Terephthalate (Resin Code #1)</h1>
+</header>
+<section class="details-section">
+
+  <img src="images/pet.png" alt="PET Plastic" class="plastic-img">
+  <h2>Properties</h2>
+  <ul>
+    <li>Thickness: 0.2mm – 2mm</li>
+    <li>Strong, lightweight, and transparent</li>
+    <li>Resistant to moisture and chemicals</li>
+  </ul>
+  <h2>Common Uses</h2>
+  <ul>
+    <li>Beverage bottles</li>
+    <li>Food packaging trays</li>
+    <li>Microwave-safe containers</li>
+  </ul>
+  <h2>Recyclability</h2>
+  <ul>
+    <li>♻️ Highly recyclable</li>
+    <li>Used to make fibers, carpets, and clothing</li>
+  </ul>
+  <p><strong>Hazards:</strong> Reusing PET bottles may release harmful chemicals when heated.</p>
+  <div class="nav-buttons">
+    <a href="index.html" class="back-btn">⬅ Back</a>
+    <a href="hdpe.html" class="next-btn">Next ➡</a>
+  </div>
+</section>
+<footer><p>© 2025 Plastic-Free Future</p></footer>
+<script>
+document.querySelectorAll('a').forEach(link => {
+  if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => (window.location = link.href), 300);
+    });
+  }
+});
+</script>
+<button id="backToTop" title="Go to top">↑</button>
+
+</body>
+</html>

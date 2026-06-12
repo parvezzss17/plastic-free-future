@@ -1,0 +1,240 @@
+/* Reset and Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #e8f5e9);
+  color: #333;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in forwards;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #00796B, #4CAF50);
+  color: white;
+  text-align: center;
+  padding: 1.5em;
+  border-bottom: 4px solid #004d40;
+}
+header h1 {
+  font-size: 1.8em;
+}
+
+/* Navigation */
+nav {
+  background: #004d40;
+  text-align: center;
+  padding: 0.8em 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #80CBC4;
+}
+
+/* Sections */
+section {
+  background: white;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-title {
+  color: #00796B;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.icon {
+  width: 40px;
+  margin-right: 10px;
+}
+
+/* Plastic List */
+.plastic-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+.plastic-list a {
+  background: linear-gradient(135deg, #4CAF50, #009688);
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.3s ease;
+}
+.plastic-list a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background: #004d40;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.9em;
+}
+
+/* Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.back-btn, .next-btn {
+  background: linear-gradient(135deg, #009688, #4CAF50);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s;
+}
+.back-btn:hover, .next-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Plastic Image */
+.plastic-img {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.3em; }
+  section { padding: 20px; }
+  .plastic-list { grid-template-columns: 1fr; }
+}
+
+/* ========== PLASTIC TYPE DETAILS PAGE ========== */
+.details-section {
+  padding: 60px 10%;
+  background: #f9fafc;
+  min-height: 80vh;
+  text-align: left;
+  color: #222;
+}
+
+.details-section h2 {
+  color: #0b7a5f;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.details-section ul {
+  list-style: disc;
+  margin-left: 30px;
+  line-height: 1.8;
+}
+
+.details-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.plastic-img {
+  display: block;
+  width: 180px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.back-btn, .next-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #0b7a5f;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover, .next-btn:hover {
+  background-color: #0e9677;
+  transform: scale(1.05);
+}
+
+/* Smooth fade transition */
+body {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+/* Ensure detail pages show properly */
+.details-section {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+/* Back to Top Button */
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+  background: linear-gradient(135deg, #66BB6A, #43A047);
+  transform: scale(1.1);
+}
